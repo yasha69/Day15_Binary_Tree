@@ -24,7 +24,6 @@ public class BinaryTree {
         }
         return root;
     }
-
     public void print(Node root) {
         if (root == null) {
             return;
@@ -39,5 +38,16 @@ public class BinaryTree {
         else
             return (size(node.left) + 1 + size(node.right));
     }
+    public boolean search(Node root, int val) {
+        if (root == null) {
+            return false;
+        }
+        if (val < root.data) {
+            return search(root.left, val);
+        } else if (root.data == val) {
+            return true;
+        } else {
+            return search(root.right, val);
+        }
+    }
 }
-

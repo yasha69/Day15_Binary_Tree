@@ -20,5 +20,9 @@ public class BinaryTreeMain {
         root = bst.insert(root, 63);
         root = bst.insert(root, 67);
         bst.print(root);
+        if (bst.search(root, 63))
+            System.out.println("\nElement is found in the binary tree");
+        else
+            System.out.println("\nElement is not found in the binary tree");
     }
 }
