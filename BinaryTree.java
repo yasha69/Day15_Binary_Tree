@@ -4,7 +4,6 @@ class Node {
     int data;
     Node left;
     Node right;
-
 }
 public class BinaryTree {
     public Node createNewNode(int k) {
@@ -14,7 +13,6 @@ public class BinaryTree {
         bst.right = null;
         return bst;
     }
-
     public Node insert(Node root, int val) {
         if (root == null) {
             return createNewNode(val);
@@ -35,4 +33,11 @@ public class BinaryTree {
         System.out.println(root.data);
         print(root.right);
     }
+    public int size(Node node) {
+        if (node == null)
+            return 0;
+        else
+            return (size(node.left) + 1 + size(node.right));
+    }
 }
+
